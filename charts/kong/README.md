@@ -502,8 +502,8 @@ directory.
 | image.repository                   | Kong image                                                                            | `kong`              |
 | image.tag                          | Kong image version                                                                    | `2.5`               |
 | image.pullPolicy                   | Image pull policy                                                                     | `IfNotPresent`      |
-| image.pullSecrets                  | Image pull secrets                                                                    | `null`              |
-| replicaCount                       | Kong instance count. It has no effect when `autoscaling.enabled` is set to true         | `1`                 |
+| image.pullSecrets                  | Image pull secrets as a list of [names of the secrets](https://github.com/Kong/charts/blob/26eff4f94d23f272a64efdfff3a5d109d923b6df/charts/kong/values.yaml#L115)                                                 | `null`              |
+| replicaCount                       | Kong instance count. It has no effect when `autoscaling.enabled` is set to true       | `1`                 |
 | plugins                            | Install custom plugins into Kong via ConfigMaps or Secrets                            | `{}`                |
 | env                                | Additional [Kong configurations](https://getkong.org/docs/latest/configuration/)      |                     |
 | customEnv                          | Custom Environment variables without `KONG_` prefix      |                                |
